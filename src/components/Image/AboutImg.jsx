@@ -28,6 +28,8 @@ const AboutImg = ({ filename, alt }) => (
       if (!image) return null;
 
       const imageFixed = image.node.childImageSharp.fixed;
+
+      console.log(imageFixed.src)
       return <Img className="rounded shadow-lg" alt={alt} fixed={imageFixed} />;
     }}
   />
