@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-d705730af95f1ac278bd.js"
+    "url": "webpack-runtime-e81675ab4471178ec2ab.js"
   },
   {
     "url": "framework-dbb498007a7447f28d8e.js"
   },
   {
-    "url": "app-71a3cb436eebb30752b2.js"
+    "url": "app-ec22a039ca8a90ca82f8.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "b65ed0d067fdddcfcde960b87b3f6e15"
+    "revision": "3490c1afce95cd599e509de0126ebd6d"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-b0556ce5127c1a3e2490.js"
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "51196b910576ff04e746dbcd50704139"
+    "revision": "6a07d35ae39e485366124ca58cdb7306"
   },
   {
     "url": "polyfill-57fa76c8ad53bd44c5a1.js"
@@ -142,12 +142,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/porfolio-dev/portfolio-dev`), ``)
+  pathname = pathname.replace(new RegExp(`^/portfolio-dev`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/porfolio-dev/portfolio-dev/app-71a3cb436eebb30752b2.js`))) {
+  if (!resources || !(await caches.match(`/portfolio-dev/app-ec22a039ca8a90ca82f8.js`))) {
     return await fetch(event.request)
   }
 
@@ -160,7 +160,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/porfolio-dev/portfolio-dev/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/portfolio-dev/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
