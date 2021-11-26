@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import LynnYangResume from '../components/Resume/LynnYangResume.pdf'
+import LynnYangResume from '../images/LynnYangResume.pdf'
 
 // HEAD DATA
 export const headData = {
