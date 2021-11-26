@@ -1,5 +1,4 @@
 import { nanoid } from 'nanoid';
-import LynnYangResume from '../images/LynnYangResume.pdf'
 
 // HEAD DATA
 export const headData = {
@@ -25,7 +24,7 @@ export const aboutData = {
     'While working in the healthcare sector, I understood that good communication and streamlined experiences were the keys to a well-thought-out platform. With my education, the General Assembly, and previous work experiences, I can elevate these features and help contribute to better application development. ',
   paragraphThree:
     'I am experienced with PostgreSQL, MongoDB, NodeJS, React, Django, JavaScript, Python, CSS, HTML and I am currently learning Typescript & Redux.',
-  resume: LynnYangResume, // if no resume, the button will not show up
+  resume: 'https://drive.google.com/file/d/1cTyRVzgUlRm8KJpDsmLqakuqRmQ7WMom/view?usp=sharing', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
